@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memotest</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F4F4F9;">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="img/logo.png" alt="Proyecto Silvestre" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../integrantes.html">Integrantes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../avances.html">Avances</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../juegos.html">Juegos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="text-center mb-5">
+                    <h1>Memotest: Encuentra los animales en extinción</h1>
+                    <p>Memotest es un juego de memoria en el que debes encontrar todas las parejas de cartas iguales en el menor número de movimientos posible.</p>
+                    <p>Las cartas representan diferentes animales en peligro de extinción en Argenina. ¡Tomemos conciencia jugando!</p>
+                </div>
+                <div class="text-center mb-5">
+                    <h2>Cómo Jugar</h2>
+                    <p>El objetivo del juego es encontrar todas las parejas de cartas iguales. Haz clic en las cartas para voltearlas. Si encuentras dos cartas con la misma imagen, se quedarán volteadas. Si no, se volverán a voltear después de un breve momento.</p>
+                </div>
+                <div class="game-container mb-5" id="gameContainer">
+                    <!-- Las tarjetas se agregan con Javascript en este contenedor. -->
+                </div>
+                <div id="message"></div>
+                <div class="footer-buttons mb-5">
+                    <button type="button" class="btn btn-primary restartButton" id="restartButton">Reiniciar juego</button>
+                    <button type="button" class="btn btn-secondary homeButton" id="homeButton">Regresar al inicio</button>
+                </div>
+                <div class="text-center mb-5">
+                    <p>Código fuente en GitHub: <a href="https://github.com/carlablanco/tpo-disenoweb-grupo-3/tree/main/juegos/JuegoMemoTest" target="_blank">Juego Memotest - Máximo Parisi</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="animalModal" tabindex="-1" aria-labelledby="animalModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="animalModalLabel"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-justify">
+                    <img id="animalImage" src="" alt="Animal" class="img-fluid mb-3">
+                    <p id="animalDescription"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary homeButton" data-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="celebrationModal" tabindex="-1" aria-labelledby="celebrationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content game-complete-modal">
+                <h5 class="modal-title" id="celebrationModalLabel">¡Felicidades!</h5>
+                <p>¡Has encontrado todos animales! ¡A cuidar de ellos!</p>
+                <button type="button" class="btn btn-primary restartButton" id="restartButtonFinal">Reiniciar juego</button>
+                <button type="button" class="btn btn-secondary homeButton" id="homeButtonFinal">Regresar al inicio</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-3" style="background-color: #4A4E69; color: #F4F4F9;">
+        <p>&copy; Derechos reservados - Sitio desarrollado para uso educativo - Diseño y desarrollo Web - UADE - 2024</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
