@@ -18,7 +18,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F4F4F9;">
         <a class="navbar-brand" href="../../index.html">
-            <img src="img/logo.png" alt="Proyecto Silvestre" height="50">
+            <img src="../../img/logo.png" alt="Proyecto Silvestre" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -40,20 +40,42 @@
             </ul>
         </div>
     </nav>
-    <main>
+
+    <main class="container mt-4">
         <div class="titleGame">
-            <h2>¡ADIVINA LAS PROBLEMATICAS!</h2>
+            <h2>¡ADIVINA LAS PROBLEMÁTICAS!</h2>
             <h5>¡Encuentra las acciones que perjudican a los animales con un clic!</h5>
         </div>
 
-        <div id="gameContainer" class="container">
+        <div class="game-description mt-4">
+            <h3>Descripción del Juego</h3>
+            <p>¡Adivina las Problemáticas! es un juego educativo en el que los jugadores deben identificar acciones negativas que afectan a los animales en diversas imágenes. El objetivo es concienciar sobre el impacto de ciertas actividades humanas en el medio ambiente y la fauna.</p>
+        </div>
+
+        <div class="game-rules mt-4">
+            <h3>Reglas del Juego</h3>
+            <ul>
+                <li>Haz clic en las áreas de la imagen que representan acciones perjudiciales para los animales.</li>
+                <li>Recibirás una descripción de cada acción perjudicial que encuentres.</li>
+                <li>Intenta encontrar todas las problemáticas en cada imagen para avanzar.</li>
+                <li>El juego se puede reiniciar para volver a jugar.</li>
+            </ul>
+        </div>
+
+        <div id="gameContainer" class="container mt-4">
             <div id="clickArea" class="text-center">
                 <img id="gameImage" src="./imagenesJuego/imagen1.jpg" alt="Imagen del juego" class="img-fluid">
             </div>
             <p id="description" class="hidden"></p>
         </div>
+
+        <div class="repository-link mt-4">
+            <h3>Link al Repositorio</h3>
+            <p>Puedes encontrar el código fuente de este juego en el siguiente <a href="https://github.com/carlablanco/tpo-disenoweb-grupo-3/tree/main/juegos/JuegoAdivinaLaAccion" target="_blank">repositorio de GitHub</a>.</p>
+        </div>
     </main>
-    <footer class="footer">
+
+    <footer class="footer mt-4">
         <div class="container">
             <p>&copy; Derechos reservados - Sitio desarrollado para uso educativo - Diseño y desarrollo Web - UADE - 2024</p>
         </div>
