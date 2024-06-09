@@ -48,11 +48,11 @@
         <section class="mt-5">
             <h2>Lista de Juegos</h2>
             <ul>
-                <li><a href="./juegos/JuegoAdivinaLaAccion/index.html" target="_blank">Adivina La Acción</a></li>
-                <li><a href="./juegos/JuegoVerdaderoOFalso/index.html" target="_blank">Verdadero o Falso</a></li>
-                <li><a href="./juegos/JuegoMemoTest/index.html" target="_blank">Memotest</a></li>
-                <li><a href="./juegos/JuegoEncuentraAlAnimalEnPeligro/index.html" target="_blank">Encuentra al animal en peligro de extinción</a></li>
-                <li><a href="./juegos/JuegoAnimalesEnExtincion/index.html" target="_blank">Animales en Extincion</a></li>
+                <li><a href="./juegos/JuegoAdivinaLaAccion/index.html" target="_blank" class="game-link">Adivina La Acción</a></li>
+                <li><a href="./juegos/JuegoVerdaderoOFalso/index.html" target="_blank" class="game-link">Verdadero o Falso</a></li>
+                <li><a href="./juegos/JuegoMemoTest/index.html" target="_blank" class="game-link">Memotest</a></li>
+                <li><a href="./juegos/JuegoEncuentraAlAnimalEnPeligro/index.html" target="_blank" class="game-link">Encuentra al animal en peligro de extinción</a></li>
+                <li><a href="./juegos/JuegoAnimalesEnExtincion/index.html" target="_blank" class="game-link">Animales en Extincion</a></li>
             </ul>
         </section>
     </main>
@@ -62,6 +62,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // JavaScript para añadir una interacción
+        document.querySelectorAll('.game-link').forEach(link => {
+            link.addEventListener('click', event => {
+                alert('¡Estás a punto de jugar ' + event.target.textContent + '!');
+            });
+        });
+    </script>
 </body>
 
 </html>
