@@ -1,75 +1,189 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="shortcut icon" href="img/logo_panda.jfif" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <title>Juegos - Proyecto Silvestre</title>
-</head>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f4f9 !important;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+    </style>
+  </head>
 
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F4F4F9;">
-        <a class="navbar-brand" href="index.html">
-            <img src="img/logo.png" alt="Proyecto Silvestre" height="50">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="integrantes.html">Integrantes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="avances.html">Avances</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="juegos.html">Juegos</a>
-                </li>
-            </ul>
-        </div>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-no-picture"
+      style="background-color: #f4f4f9"
+    >
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo_panda.jfif" alt="Proyecto Silvestre" height="50" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="integrantes.html">Integrantes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="avances.html">Avances</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="juegos.html">Juegos</a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <main class="container my-5">
-        <h1 class="display-4 text-center">Juegos</h1>
-        <section class="mt-5">
-            <h2>Descripción de los Juegos</h2>
-            <p>Nuestros juegos educativos están diseñados para crear conciencia sobre la conservación de animales en peligro de extinción de una manera entretenida e interactiva. Cada juego aborda diferentes aspectos de la vida y los desafíos que enfrentan estos animales, ofreciendo a los jugadores la oportunidad de aprender mientras se divierten. Los juegos están pensados para ser atractivos y accesibles para todas las edades, promoviendo tanto el conocimiento como el compromiso con la conservación.</p>
-        </section>
-        <section class="mt-5">
-            <h2>Lista de Juegos</h2>
-            <ul>
-                <li><a href="./juegos/JuegoAdivinaLaAccion/index.html" target="_blank" class="game-link">Adivina La Acción</a></li>
-                <li><a href="./juegos/JuegoVerdaderoOFalso/index.html" target="_blank" class="game-link">Verdadero o Falso</a></li>
-                <li><a href="./juegos/JuegoMemoTest/index.html" target="_blank" class="game-link">Memotest</a></li>
-                <li><a href="./juegos/JuegoEncuentraAlAnimalEnPeligro/index.html" target="_blank" class="game-link">Encuentra al animal en peligro de extinción</a></li>
-                <li><a href="./juegos/JuegoAnimalesEnExtincion/index.html" target="_blank" class="game-link">Distingue entre Animales</a></li>
-            </ul>
-        </section>
+    <main class="container my-5 proyect">
+      <h1 class="display-4 text-center">Juegos</h1>
+      <section class="mt-5">
+        <h2>Descripción de los Juegos</h2>
+        <p>
+          Nuestros juegos educativos están diseñados para crear conciencia sobre
+          la conservación de animales en peligro de extinción de una manera
+          entretenida e interactiva. Cada juego aborda diferentes aspectos de la
+          vida y los desafíos que enfrentan estos animales, ofreciendo a los
+          jugadores la oportunidad de aprender mientras se divierten. Los juegos
+          están pensados para ser atractivos y accesibles para todas las edades,
+          promoviendo tanto el conocimiento como el compromiso con la
+          conservación.
+        </p>
+      </section>
+      <section class="mt-5">
+        <h2>Lista de Juegos</h2>
+        <div class="game-card">
+          <div class="image-game">
+            <img
+              src="img/juegos/adivina_la_accion.jpg"
+              alt="Adivina La Acción"
+            />
+            <button
+              class="play-button"
+              onclick="window.open('./juegos/JuegoAdivinaLaAccion/index.html', '_blank')"
+            ></button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Adivina La Acción</h5>
+            <p class="card-text">
+              Un juego para adivinar las acciones que ponen en peligro a los animales.
+            </p>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="image-game">
+            <img
+              src="img/juegos/verdadero_falso.png"
+              alt="Verdadero o Falso"
+            />
+            <button
+              class="play-button"
+              onclick="window.open('./juegos/JuegoVerdaderoOFalso/index.html', '_blank')"
+            ></button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Verdadero o Falso</h5>
+            <p class="card-text">
+              Pon a prueba tu conocimiento sobre animales en peligro de
+              extinción.
+            </p>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="image-game">
+            <img src="img/juegos/memotest.png" alt="Memotest" />
+            <button
+              class="play-button"
+              onclick="window.open('./juegos/JuegoMemoTest/index.html', '_blank')"
+            ></button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Memotest</h5>
+            <p class="card-text">
+              Encuentra las parejas de animales en peligro de extinción.
+            </p>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="image-game">
+            <img
+              src="img/juegos/adivina_mapa.png"
+              alt="Encuentra al animal en peligro de extinción"
+            />
+            <button
+              class="play-button"
+              onclick="window.open('./juegos/JuegoEncuentraAlAnimalEnPeligro/index.html', '_blank')"
+            ></button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">
+              Encuentra al animal en peligro de extinción
+            </h5>
+            <p class="card-text">
+              Identifica la ubicación de los animales en peligro de extinción.
+            </p>
+          </div>
+        </div>
+        <div class="game-card">
+          <div class="image-game">
+            <img
+              src="img/juegos/distingue_animales.png"
+              alt="Distingue entre Animales"
+            />
+            <button
+              class="play-button"
+              onclick="window.open('./juegos/JuegoAnimalesEnExtincion/index.html', '_blank')"
+            ></button>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Distingue entre Animales</h5>
+            <p class="card-text">
+              Aprende a diferenciar entre animales en peligro y otros.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer class="text-center py-3" style="background-color: #4A4E69; color: #F4F4F9;">
-        <p>&copy; Derechos reservados - Sitio desarrollado para uso educativo - Diseño y desarrollo Web - UADE - 2024</p>
+    <footer class="text-center py-3 footer-no-picture">
+      <p>
+        &copy; Derechos reservados - Sitio desarrollado para uso educativo -
+        Diseño y desarrollo Web - UADE - 2024
+      </p>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // JavaScript para añadir una interacción
-        document.querySelectorAll('.game-link').forEach(link => {
-            link.addEventListener('click', event => {
-                alert('¡Estás a punto de jugar ' + event.target.textContent + '!');
-            });
-        });
-    </script>
-</body>
-
+  </body>
 </html>
