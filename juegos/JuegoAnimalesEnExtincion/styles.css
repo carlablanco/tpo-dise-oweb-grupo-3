@@ -79,7 +79,7 @@
 }
 
 .animal-image.selected {
-    border-color: #ff0000;
+    border-color: #0288d1;
     border-width: 10px;
     animation: shake 0.3s;
 }
@@ -137,4 +137,8 @@ button {
 
 button:hover {
     background-color: #C9ADA7;
+}
+
+.gameContainer p {
+    margin-bottom: 0;
 }

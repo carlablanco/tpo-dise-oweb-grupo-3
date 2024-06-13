@@ -22,8 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function initializeGame() {
-        checkButton.style.visibility = 'visible';
-        restartButton.style.visibility = 'hidden';
         animalGrid.innerHTML = '';
         animals.forEach(animal => {
             const imgContainer = document.createElement('div');
@@ -108,17 +106,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 img.classList.add('incorrect');
             }
         });
-        checkButton.style.visibility = 'hidden';
-        restartButton.style.visibility = 'visible';
+        checkButton.disabled = true;
+        restartButton.disabled = false;
         const result = getGameResult();
         document.getElementById('resultText').textContent = result;
         const modal = new bootstrap.Modal(document.getElementById('resultModal'));
         modal.show();
     });
-
+    
     restartButton.addEventListener('click', () => {
-        checkButton.style.visibility = 'visible';
-        restartButton.style.visibility = 'hidden';
+        checkButton.disabled = false;
+        restartButton.disabled = true;
         showScreen('startScreen');
     });
 
