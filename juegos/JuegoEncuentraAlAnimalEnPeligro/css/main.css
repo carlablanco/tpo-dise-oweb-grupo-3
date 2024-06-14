@@ -7,11 +7,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-   flex-direction:column;
+  flex-direction: column;
 }
 
 img {
-
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
@@ -23,4 +22,6 @@ p {
   display: block;
 }
 
-
+select {
+  margin-bottom: 10px;
+}
