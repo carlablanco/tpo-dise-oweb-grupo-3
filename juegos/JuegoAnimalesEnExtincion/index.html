@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="../../img/logo_panda.jfif" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Proyecto Silvestre</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-no-picture" style="background-color: #F4F4F9;">
+        <a class="navbar-brand" href="../../index.html">
+            <img src="../../img/logo_panda.jfif" alt="Proyecto Silvestre" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../integrantes.html">Integrantes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../../avances.html">Avances</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="../../juegos.html">Juegos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-inicio container my-5 text-center proyect">
+        <div class="titleGame">
+            <h1>Distingue entre Animales</h2>
+            <p>Detecta qué animales están en peligro de extinción!</p>
+            <p>Selecciona los que pienses que los están.</p>
+            <p>Al terminar de seleccionar, pulsa el botón "Verificar" para ver tus resultados.</p>
+        </div>
+
+        <div class="game-description mt-4">
+            <h2>Descripción del Juego</h3>
+            <p>El Juego de Animales en Peligro de Extinción es un juego educativo diseñado para concienciar a los jugadores sobre las especies que están en peligro. Los jugadores deben identificar y seleccionar los animales que creen que están en peligro de extinción.</p>
+        </div>
+
+        <div id="gameContainer" class="container mt-4">
+            <div id="startScreen" style="display: none;">
+                <p>Presiona el botón para comenzar a jugar</p>
+                <button id="startButton" class="btn btn-primary">Comenzar a jugar</button>
+            </div>
+            <div id="gameScreen" style="display: none;">
+                <div id="animalGrid" class="row"></div>
+                <button id="checkButton" class="btn btn-success mt-3">Verificar</button>
+                <button id="restartButton" class="btn btn-secondary mt-3">Volver a jugar</button>
+            </div>
+            <div id="resultModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="resultModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="resultModalLabel">Resultado</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p id="resultText"></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="repository-link mt-4">
+            <h2>Link al Repositorio</h3>
+            <p>Puedes encontrar el código fuente de este juego en el siguiente <a href="https://github.com/carlablanco/tpo-disenoweb-grupo-3/tree/main/juegos/JuegoAnimalesEnExtincion" target="_blank">Distingue entre Animales - Juan Serra</a>.</p>
+        </div>
+    </main>
+
+    <footer class="text-center py-3 footer-no-picture">
+        <p>&copy; Derechos reservados - Sitio desarrollado para uso educativo - Diseño y desarrollo Web - UADE - 2024</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="logica.js"></script>
+</body>
+</html>

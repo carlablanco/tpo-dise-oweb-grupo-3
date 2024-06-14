@@ -7,23 +7,23 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../../styles/styles.css">
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/logo_panda.jfif" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <title>Proyecto Silvestre</title>
+    <title>Verdadero o Falso - Proyecto Silvestre</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #F4F4F9;">
+    <nav class="navbar navbar-expand-lg navbar-no-picture" style="background-color: #F4F4F9;">
         <a class="navbar-brand" href="../../index.html">
-            <img src="img/logo.png" alt="Proyecto Silvestre" height="50">
+            <img src="../../img/logo_panda.jfif" alt="Proyecto Silvestre" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="../../index.html">Home</a>
                 </li>
                 <li class="nav-item">
@@ -32,40 +32,61 @@
                 <li class="nav-item">
                     <a class="nav-link" href="../../avances.html">Avances</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="../../juegos.html">Juegos</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <main>
+    <main class="container mt-4 proyect">
         <div class="titleGame">
             <h2>Verdadero o Falso</h2>
             <h5>Seleccioná verdadero o falso para la siguiente afirmación:</h5>
         </div>
+        
+        <div class="game-description mt-4">
+            <h3>Descripción del Juego</h3>
+            <p>Verdadero o Falso es un juego educativo que presenta una serie de afirmaciones a las cuales el jugador debe responder si son verdaderas o falsas. El objetivo es fomentar el aprendizaje a través del juego, permitiendo a los jugadores evaluar y mejorar sus conocimientos sobre diversos temas.</p>
+        </div>
 
-        <div id="gameContainer" class="container">
+        <div class="game-rules mt-4">
+            <h3>Reglas del Juego</h3>
+            <ul>
+                <li>El juego presentará una afirmación en la pantalla.</li>
+                <li>El jugador debe seleccionar si la afirmación es verdadera o falsa.</li>
+                <li>El juego proporcionará una explicación de la respuesta correcta.</li>
+                <li>El jugador podrá continuar a la siguiente pregunta o reiniciar el juego al final.</li>
+            </ul>
+        </div>
+
+        <div id="gameContainer" class="container mt-4">
             <div id="question-container">
                 <p id="question"></p>
             </div>
             <div id="buttons-container">
-                <button id="true-btn">Verdadero</button>
-                <button id="false-btn">Falso</button>
+                <button id="true-btn" class="btn btn-success">Verdadero</button>
+                <button id="false-btn" class="btn btn-danger">Falso</button>
             </div>
-            <div id="result-container">
+            <div id="result-container" class="mt-3">
                 <p id="result"></p>
                 <p id="explanation"></p>
-                <button id="next-btn" style="display: none;">Siguiente</button>
+                <button id="next-btn" class="btn btn-primary" style="display: none;">Siguiente</button>
             </div>
-            <div id="score-container" style="display: none;">
+            <div id="score-container" class="mt-3" style="display: none;">
                 <p id="final-score"></p>
                 <p id="final-message"></p>
-                <button id="restart-btn">Reiniciar</button>
+                <button id="restart-btn" class="btn btn-secondary">Reiniciar</button>
             </div>
         </div>
+        
+        <div class="repository-link mt-4">
+            <h3>Link al Repositorio</h3>
+            <p>Puedes encontrar el código fuente de este juego en el siguiente <a href="https://github.com/carlablanco/tpo-disenoweb-grupo-3/tree/main/juegos/JuegoVerdaderoOFalso" target="_blank">repositorio de GitHub</a>.</p>
+        </div>
     </main>
-    <footer class="footer">
+
+    <footer class="footer-no-picture mt-4">
         <div class="container">
             <p>&copy; Derechos reservados - Sitio desarrollado para uso educativo - Diseño y desarrollo Web - UADE - 2024</p>
         </div>
