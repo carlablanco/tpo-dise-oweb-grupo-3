@@ -275,8 +275,17 @@ footer {
     height: 80px;
     transition: transform 0.3s;
 }
-.rounded-image {
-  border-radius: 50%;
+
 }
 
+.rounded-image {
+  border-radius: 10%;
+
+
+}
+
+.animalImage {
+  width: 100%;
+  height: auto; /* Esto asegura que la altura se ajuste proporcionalmente */
+  border-radius: 50%; /* Para mantener las esquinas redondeadas */
 }

@@ -78,9 +78,6 @@ function startGame() {
 function showAnimal(animal) {
   $animalImage.src = animal.image;
   $animalName.textContent = animal.name;
-
-  // Ajustar el ancho de la imagen del animal al ancho del mapa
-  $animalImage.style.width = $map.clientWidth + 'px';
 }
 
 function handleClick(e) {
