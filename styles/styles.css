@@ -296,6 +296,10 @@ footer {
     height: 80px;
     transition: transform 0.3s;
 }
+.rounded-image {
+  border-radius: 50%;
+}
+
 }
 
 .accessibility-menu {

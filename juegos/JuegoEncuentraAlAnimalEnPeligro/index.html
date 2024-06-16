@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="../../img/logo_panda.jfif" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <title>Animales en Extinción - Encuentra el País del Pangolín</title>
+    <title>Animales en Extinción - Encuentra el País del Animal en Peligro</title>
 </head>
 <body>
     <div class="accessibility-menu">
@@ -54,26 +53,33 @@
 
     <main class="container proyect">
         <div class="titleGame">
-            <h2>Encuentra el País de Origen del Pangolín</h2>
+            <h2>Encuentra el País de Origen del Animal en Peligro de Extinción</h2>
         </div>
         
         <div class="game-description mt-4">
             <h3>Descripción del Juego</h3>
-            <p>Este juego educativo te desafía a encontrar el país de origen del Pangolín en el mapa. El objetivo es fomentar el aprendizaje sobre la geografía y la conservación de los animales en peligro de extinción.</p>
+            <p>Este juego educativo te desafía a encontrar el país de origen de animales en peligro de extinción en el mapa. El objetivo es fomentar el aprendizaje sobre la geografía y la conservación de los animales en peligro de extinción.</p>
         </div>
 
         <div class="game-rules mt-4">
             <h3>Reglas del Juego</h3>
             <ul>
-                <li>Observa el mapa y encuentra el país de origen del Pangolín.</li>
+                <li>Observa el mapa y encuentra el país de origen del animal seleccionado.</li>
                 <li>Haz clic en el mapa para seleccionar el país.</li>
                 <li>El juego te dirá la distancia entre tu selección y el país correcto.</li>
             </ul>
         </div>
 
-        <div id="gameContainer" class="container mt-4">
-            <img src="img/mapamundi-politico-mediano.jpg" id="map" class="img-fluid" draggable="false">
+        <div class="container mt-4 text-center">
+            <img id="animalImage" src="img/pangolin.jpeg" alt="Pangolín" class="img-fluid mb-3 rounded-image">
+            <h4 id="animalName">Pangolín</h4>
+            <button id="startButton" class="btn btn-primary mt-3">Iniciar Juego</button>
+            <img src="img/mapamundi-politico-mediano.jpg" id="map" class="img-fluid mt-4" draggable="false">
             <p id="distance" class="mt-3"></p>
+        </div>
+        <div class="repository-link mt-4">
+            <h2>Link al Repositorio</h3>
+            <p>Puedes encontrar el código fuente de este juego en el siguiente <a href="https://github.com/carlablanco/tpo-disenoweb-grupo-3/tree/main/juegos/JuegoEncuentraAlAnimalEnPeligro" target="_blank">Encuentra al animal en peligro de extinción - Marcelo Nieli</a>.</p>
         </div>
     </main>
 
@@ -82,7 +88,7 @@
             <p>&copy; Derechos reservados - Sitio desarrollado para uso educativo - Diseño y desarrollo Web - UADE - 2024</p>
         </div>
     </footer>
-    <script src="js/game2.js" charset="utf-8"></script>
     <script src="../../scripts/script.js"></script>
+    <script src="game.js" charset="utf-8"></script>
 </body>
 </html>
