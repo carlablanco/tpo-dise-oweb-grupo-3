@@ -4,7 +4,7 @@ const ANIMALES = [
     x: 1500,
     y: 500,
     radius: 300,
-    image: "img/pangolin.jpeg",
+    image: "../../img/pangolin.jpeg",
     message: "El pangolín está en peligro de extinción debido a la caza ilegal y la pérdida de hábitat."
   },
   {
@@ -12,7 +12,7 @@ const ANIMALES = [
     x: 1600,
     y: 550,
     radius: 300,
-    image: "img/lemur.jpeg",
+    image: "../../img/lemur.jpeg",
     message: "El lemur está en peligro de extinción debido a la caza furtiva y la destrucción de su hábitat."
   },
   {
@@ -20,7 +20,7 @@ const ANIMALES = [
     x: 1300,
     y: 800,
     radius: 300,
-    image: "img/rhino.jpg",
+    image: "../../img/rhino.jpg",
     message: "El rinoceronte está en peligro de extinción debido a la caza ilegal por sus cuernos."
   }
 ];
@@ -30,10 +30,8 @@ const HEIGHT = 1426;
 
 function getDistance(e, target) {
   const rect = e.target.getBoundingClientRect();
-  let offsetX = e.clientX - rect.left;
-  let offsetY = e.clientY - rect.top;
-  let diffX = offsetX - (target.x * (rect.width / WIDTH));
-  let diffY = offsetY - (target.y * (rect.height / HEIGHT));
+  let diffX = e.clientX - rect.left - target.x;
+  let diffY = e.clientY - rect.top - target.y;
   return Math.sqrt((diffX * diffX) + (diffY * diffY));
 }
 
@@ -78,22 +76,17 @@ function startGame() {
 function showAnimal(animal) {
   $animalImage.src = animal.image;
   $animalName.textContent = animal.name;
-
-  // Ajustar el ancho de la imagen del animal al ancho del mapa
-  $animalImage.style.width = $map.clientWidth + 'px';
 }
 
 function handleClick(e) {
   clicks++;
   let target = ANIMALES[currentAnimalIndex];
   let distance = getDistance(e, target);
+  console.log(distance); // Agrega esta línea
   let distanceHint = getDistanceHint(distance);
   $distance.innerHTML = `<h1>${distanceHint}</h1>`;
 
-  const rect = e.target.getBoundingClientRect();
-  let offsetX = e.clientX - rect.left;
-  let offsetY = e.clientY - rect.top;
-  if (isWithinCircle(offsetX, offsetY, target.x * (rect.width / WIDTH), target.y * (rect.height / HEIGHT), target.radius * (rect.width / WIDTH))) {
+  if (isWithinCircle(e.offsetX, e.offsetY, target.x, target.y, target.radius)) {
     alert(`¡Encontraste al ${target.name} en ${clicks} clics!\n${target.message}`);
     clicks = 0;
     currentAnimalIndex++;
@@ -105,5 +98,6 @@ function handleClick(e) {
     }
   }
 }
+
 
 $startButton.addEventListener('click', startGame);
