@@ -14,6 +14,10 @@
     <title>Verdadero o Falso - Proyecto Silvestre</title>
 </head>
 <body>
+    <div class="accessibility-menu">
+        <button onclick="changeTextSize('increase')" class="btn btn-primary">A+</button>
+        <button onclick="changeTextSize('decrease')" class="btn btn-primary">A-</button>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-no-picture" style="background-color: #F4F4F9;">
         <a class="navbar-brand" href="../../index.html">
             <img src="../../img/logo_panda.jfif" alt="Proyecto Silvestre" height="50">
@@ -39,7 +43,16 @@
         </div>
     </nav>
 
-    <main class="container mt-4 proyect">
+    <div class="container mt-3" style="align-items: flex-start;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../juegos.html">Juegos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Verdadero o Falso</li>
+            </ol>
+        </nav>
+    </div>
+
+    <main class="container proyect">
         <div class="titleGame">
             <h2>Verdadero o Falso</h2>
             <h5>Seleccioná verdadero o falso para la siguiente afirmación:</h5>
@@ -92,5 +105,6 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="../../scripts/script.js"></script>
 </body>
 </html>

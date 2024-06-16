@@ -13,6 +13,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="accessibility-menu">
+        <button onclick="changeTextSize('increase')" class="btn btn-primary">A+</button>
+        <button onclick="changeTextSize('decrease')" class="btn btn-primary">A-</button>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-no-picture" style="background-color: #F4F4F9;">
         <a class="navbar-brand" href="../../index.html">
             <img src="../../img/logo_panda.jfif" alt="Proyecto Silvestre" height="50">
@@ -37,24 +41,34 @@
             </ul>
         </div>
     </nav>
-    <div class="container mt-5 proyect">
+
+    <div class="container mt-3" style="align-items: flex-start;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../juegos.html">Juegos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Memotest</li>
+            </ol>
+        </nav>
+    </div>
+
+    <div class="container proyect">
         <div class="row justify-content-center">
             <div class="col-12">
                 <div class="text-center mb-5">
                     <h1>Memotest: Encuentra los animales en extinción</h1>
                     <p>Memotest es un juego de memoria en el que debes encontrar todas las parejas de cartas iguales en el menor número de movimientos posible.</p>
-                    <p>Las cartas representan diferentes animales en peligro de extinción en Argenina. ¡Tomemos conciencia jugando!</p>
+                    <p>Las cartas representan diferentes animales en peligro de extinción en Argentina. ¡Tomemos conciencia jugando!</p>
                 </div>
                 <div class="text-center mb-5">
                     <h2>Cómo Jugar</h2>
                     <p>El objetivo del juego es encontrar todas las parejas de cartas iguales. Haz clic en las cartas para voltearlas. Si encuentras dos cartas con la misma imagen, se quedarán volteadas. Si no, se volverán a voltear después de un breve momento.</p>
                 </div>
-                <div class="game-container mb-5" id="gameContainer">
+                <div class="game-container mb-3" id="gameContainer">
                     <!-- Las tarjetas se agregan con Javascript en este contenedor. -->
                 </div>
-                <div id="message"></div>
+                <div id="message">Intentos: 0</div>
                 <div class="footer-buttons mb-5">
-                    <button type="button" class="btn btn-secondary" id="homeButton"  style="margin-right: 10px;">Regresar al inicio</button>
+                    <button type="button" class="btn btn-secondary" id="homeButton" style="margin-right: 10px;">Regresar al inicio</button>
                     <button type="button" class="btn btn-primary" id="restartButton">Reiniciar juego</button>
                 </div>
                 <div class="text-center mb-5">
@@ -89,13 +103,14 @@
             <div class="modal-content game-complete-modal">
                 <h5 class="modal-title" id="celebrationModalLabel">¡Felicidades!</h5>
                 <p>¡Has encontrado todos animales! ¡A cuidar de ellos!</p>
+                <p>Intentos utilizados: <span id="attemptsCount"></span></p>
                 <button type="button" class="btn btn-primary" id="restartButtonFinal">Reiniciar juego</button>
                 <button type="button" class="btn btn-secondary" id="homeButtonFinal">Regresar al inicio</button>
             </div>
         </div>
     </div>
 
-    <footer class="text-center py-3 footer-no-picture">
+    <footer class="text-center py-3 footer-no-picture" style="padding: 10px;">
         <p>&copy; Derechos reservados - Sitio desarrollado para uso educativo - Diseño y desarrollo Web - UADE - 2024</p>
     </footer>
 
@@ -103,5 +118,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
+    <script src="../../scripts/script.js"></script>
 </body>
 </html>

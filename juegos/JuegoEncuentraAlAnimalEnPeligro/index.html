@@ -14,6 +14,10 @@
     <title>Animales en Extinción - Encuentra el País del Pangolín</title>
 </head>
 <body>
+    <div class="accessibility-menu">
+        <button onclick="changeTextSize('increase')" class="btn btn-primary">A+</button>
+        <button onclick="changeTextSize('decrease')" class="btn btn-primary">A-</button>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-no-picture" style="background-color: #F4F4F9;">
         <a class="navbar-brand" href="../../index.html">
             <img src="../../img/logo_panda.jfif" alt="Proyecto Silvestre" height="50">
@@ -39,7 +43,16 @@
         </div>
     </nav>
 
-    <main class="container mt-4 proyect">
+    <div class="container mt-3" style="align-items: flex-start;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../juegos.html">Juegos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Encuentra Al Animal En Peligro</li>
+            </ol>
+        </nav>
+    </div>
+
+    <main class="container proyect">
         <div class="titleGame">
             <h2>Encuentra el País de Origen del Pangolín</h2>
         </div>
@@ -70,5 +83,6 @@
         </div>
     </footer>
     <script src="js/game2.js" charset="utf-8"></script>
+    <script src="../../scripts/script.js"></script>
 </body>
 </html>
