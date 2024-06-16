@@ -1,3 +1,25 @@
+$(document).ready(function() {
+  // Configurar la lupa una vez que la imagen del mapa se haya cargado completamente
+  $('#map img').on('load', function() {
+    $(this).imageLens({
+      lensSize: 200,
+      borderSize: 1,
+      borderColor: '#ccc',
+      lensShape: 'square',
+      cursor: 'crosshair'
+    });
+  });
+
+  // Función para manejar eventos de mouseover y mouseout del mapa
+  $map.addEventListener('mouseover', function() {
+    this.style.cursor = 'url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-zoom-in-128.png"), auto';
+  });
+
+  $map.addEventListener('mouseout', function() {
+    this.style.cursor = 'auto';
+  });
+});
+
 const ANIMALES = [
   {
     name: "Pangolín",
@@ -17,7 +39,7 @@ const ANIMALES = [
   },
   {
     name: "Rinoceronte de java en Indonesia",
-    x: 1300,
+    x: 2500,
     y: 800,
     radius: 300,
     image: "img/rinoceronte-java.jpg",
