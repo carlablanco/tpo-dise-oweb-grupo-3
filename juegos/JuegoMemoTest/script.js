@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         segundoAnimal = secondCard.querySelector('.card-back img').src;
         const isMatch = primerAnimal === segundoAnimal;
         
-        intentos++; // Incrementar el contador de intentos
+        intentos++;
         document.getElementById('message').innerText = `Intentos: ${intentos}`;
     
         if (isMatch) {
