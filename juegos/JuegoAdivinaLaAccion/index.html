@@ -13,9 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <title>Proyecto Silvestre</title>
+
 </head>
 
 <body>
+    <div class="accessibility-menu">
+        <button onclick="changeTextSize('increase')" class="btn btn-primary">A+</button>
+        <button onclick="changeTextSize('decrease')" class="btn btn-primary">A-</button>
+    </div>
     <nav class="navbar navbar-expand-lg navbar-no-picture" style="background-color: #F4F4F9;">
         <a class="navbar-brand" href="../../index.html">
             <img src="../../img/logo_panda.jfif" alt="Proyecto Silvestre" height="50">
@@ -41,7 +46,16 @@
         </div>
     </nav>
 
-    <main class="container mt-4 proyect">
+    <div class="container mt-3" style="align-items: flex-start;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="../../juegos.html">Juegos</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Adivina las problemáticas</li>
+            </ol>
+        </nav>
+    </div>
+
+    <main class="container proyect">
         <div class="titleGame">
             <h2>¡ADIVINA LAS PROBLEMÁTICAS!</h2>
             <h5>¡Encuentra las acciones que perjudican a los animales con un clic!</h5>
@@ -69,6 +83,14 @@
             <p id="description" class="hidden"></p>
         </div>
 
+        <div id="messageBox"></div>
+        <div id="remainingImages"></div>
+        
+        <div class="game-buttons mt-4 text-center">
+            <button class="btn btn-primary" onclick="restartGame()">Volver a Jugar</button>
+            <button class="btn btn-secondary" onclick="exitGame()">Salir</button>
+        </div>
+
         <div class="repository-link mt-4">
             <h3>Link al Repositorio</h3>
             <p>Puedes encontrar el código fuente de este juego en el siguiente <a href="https://github.com/carlablanco/tpo-disenoweb-grupo-3/tree/main/juegos/JuegoAdivinaLaAccion" target="_blank">repositorio de GitHub</a>.</p>
@@ -85,6 +107,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="game.js"></script>
+    <script src="../../scripts/script.js"></script>
 </body>
 
 </html>

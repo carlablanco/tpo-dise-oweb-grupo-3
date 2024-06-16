@@ -57,6 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let lockBoard = false;
     let matchesFound = 0;
     let animalesEncontrados = [];
+    let intentos = 0;
 
     images.forEach((image) => {
         const card = document.createElement('div');
@@ -120,6 +121,9 @@ document.addEventListener('DOMContentLoaded', () => {
         primerAnimal = firstCard.querySelector('.card-back img').src;
         segundoAnimal = secondCard.querySelector('.card-back img').src;
         const isMatch = primerAnimal === segundoAnimal;
+        
+        intentos++;
+        document.getElementById('message').innerText = `Intentos: ${intentos}`;
     
         if (isMatch) {
             matchesFound++;
@@ -136,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
             animalModal.on('hidden.bs.modal', () => {
                 if (matchesFound === images.length / 2) {
+                    document.getElementById('attemptsCount').textContent = intentos;
                     celebrationModal.modal('show');
                 }
             });

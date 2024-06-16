@@ -55,13 +55,14 @@ document.getElementById('clickArea').addEventListener('click', function(event) {
     const clickY = event.clientY - rect.top;
 
     if (Math.abs(clickX - targetX) <= toleranceX && Math.abs(clickY - targetY) <= toleranceY) {
-        alert(currentTarget.description);
-        setTimeout(nextImage, 20);
+        showMessage(currentTarget.description);
     }
 });
 
 function startGame() {
     gameStarted = true;
+    document.getElementById('gameImage').src = images[currentImage].src;
+    updateRemainingImages();
 }
 
 function nextImage() {
@@ -69,7 +70,35 @@ function nextImage() {
     if (currentImage < images.length) {
         const nextImage = images[currentImage];
         document.getElementById('gameImage').src = nextImage.src;
+        updateRemainingImages();
     } else {
         window.location.href = "../../juegos.html";
     }
+}
+
+function showMessage(message) {
+    const messageBox = document.getElementById('messageBox');
+    messageBox.innerHTML = `<p>${message}</p><button onclick="closeMessage()">Siguiente</button>`;
+    messageBox.style.display = 'block';
+}
+
+function closeMessage() {
+    const messageBox = document.getElementById('messageBox');
+    messageBox.style.display = 'none';
+    nextImage();
+}
+
+function updateRemainingImages() {
+    const remainingImages = images.length - currentImage - 1;
+    const remainingImagesBox = document.getElementById('remainingImages');
+    remainingImagesBox.innerHTML = `Imágenes restantes: ${remainingImages}`;
+    remainingImagesBox.style.display = 'block';
+}
+
+function restartGame() {
+location.reload();
+}
+
+function exitGame() {
+    window.location.href = '../../juegos.html';
 }
