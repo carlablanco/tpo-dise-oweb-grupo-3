@@ -17,6 +17,7 @@
     text-align: center;
     top: 50%;
     left: 50%;
+    padding-top: 20px;
     padding-bottom: 20px;
 }
 
@@ -26,6 +27,53 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+
+#messageBox p {
+    margin-bottom: 10px;
+}
+
+#messageBox button {
+    background-color: #007bff; 
+    color: white; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#messageBox button:hover {
+    background-color: #0056b3; 
+}
+
+#messageBox {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 15px;
+    display: none;
+    z-index: 1000;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#remainingImages {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
 }
 
 @media (max-width: 767px) {

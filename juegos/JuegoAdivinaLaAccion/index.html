@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <title>Proyecto Silvestre</title>
+
 </head>
 
 <body>
@@ -80,6 +81,14 @@
                 <img id="gameImage" src="./imagenesJuego/imagen1.jpg" alt="Imagen del juego" class="img-fluid">
             </div>
             <p id="description" class="hidden"></p>
+        </div>
+
+        <div id="messageBox"></div>
+        <div id="remainingImages"></div>
+        
+        <div class="game-buttons mt-4 text-center">
+            <button class="btn btn-primary" onclick="restartGame()">Volver a Jugar</button>
+            <button class="btn btn-secondary" onclick="exitGame()">Salir</button>
         </div>
 
         <div class="repository-link mt-4">
