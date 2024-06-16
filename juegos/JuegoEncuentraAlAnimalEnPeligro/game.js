@@ -9,19 +9,19 @@ const ANIMALES = [
   },
   {
     name: "Lemur",
-    x: 1600,
-    y: 550,
+    x: 1800,
+    y: 1000,
     radius: 300,
     image: "img/lemur.jpeg",
     message: "El lemur está en peligro de extinción debido a la caza furtiva y la destrucción de su hábitat."
   },
   {
-    name: "Rinoceronte",
+    name: "Rinoceronte de java en Indonesia",
     x: 1300,
     y: 800,
     radius: 300,
-    image: "img/rhino.jpg",
-    message: "El rinoceronte está en peligro de extinción debido a la caza ilegal por sus cuernos."
+    image: "img/rinoceronte-java.jpg",
+    message: "El rinoceronte de Java tiene una población de unos 58-68 rinocerontes, su riesgo de extinción es bastante crítico "
   }
 ];
 
@@ -73,6 +73,12 @@ function startGame() {
   clicks = 0;
   showAnimal(ANIMALES[currentAnimalIndex]);
   $map.addEventListener('click', handleClick);
+  $map.addEventListener('mouseover', () => {
+    $map.style.cursor = 'url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-zoom-in-128.png"), auto';
+  });
+  $map.addEventListener('mouseout', () => {
+    $map.style.cursor = 'auto';
+  });
 }
 
 function showAnimal(animal) {
@@ -99,6 +105,8 @@ function handleClick(e) {
     } else {
       alert('¡Has encontrado todos los animales en peligro de extinción!');
       $map.removeEventListener('click', handleClick);
+      $map.removeEventListener('mouseover', () => {});
+      $map.removeEventListener('mouseout', () => {});
     }
   }
 }
