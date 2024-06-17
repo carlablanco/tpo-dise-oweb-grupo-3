@@ -1,33 +1,11 @@
-$(document).ready(function() {
-  // Configurar la lupa una vez que la imagen del mapa se haya cargado completamente
-  $('#map img').on('load', function() {
-    $(this).imageLens({
-      lensSize: 200,
-      borderSize: 1,
-      borderColor: '#ccc',
-      lensShape: 'square',
-      cursor: 'crosshair'
-    });
-  });
-
-  // Función para manejar eventos de mouseover y mouseout del mapa
-  $map.addEventListener('mouseover', function() {
-    this.style.cursor = 'url("https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-zoom-in-128.png"), auto';
-  });
-
-  $map.addEventListener('mouseout', function() {
-    this.style.cursor = 'auto';
-  });
-});
-
 const ANIMALES = [
   {
-    name: "Pangolín",
+    name: "Pangolín (Manis pentadactyla)",
     x: 1500,
     y: 500,
     radius: 300,
     image: "img/pangolin.jpeg",
-    message: "El pangolín está en peligro de extinción debido a la caza ilegal y la pérdida de hábitat."
+    message: "El pangolín (Manis pentadactyla) ubicando en China, están en peligro de extinción debido a la caza y comercio ilegal por sus escamas y carne, así como la pérdida de hábitat; se estima que solo quedan unos 200,000 ejemplares en todo el mundo."
   },
   {
     name: "Lemur",
@@ -35,15 +13,15 @@ const ANIMALES = [
     y: 1000,
     radius: 300,
     image: "img/lemur.jpeg",
-    message: "El lemur está en peligro de extinción debido a la caza furtiva y la destrucción de su hábitat."
+    message: "El lemur ubicado en Madagastar, está en peligro de extinción debido a la deforestación, la caza furtiva y la pérdida de hábitat; se estima que quedan aproximadamente 2,000 ejemplares."
   },
   {
-    name: "Rinoceronte de java en Indonesia",
+    name: "Rinoceronte de java",
     x: 2500,
     y: 800,
     radius: 300,
     image: "img/rinoceronte-java.jpg",
-    message: "El rinoceronte de Java tiene una población de unos 58-68 rinocerontes, su riesgo de extinción es bastante crítico "
+    message: "El rinoceronte de Java ubicado en Indonesia, tiene una población de unos 58-68 rinocerontes, su riesgo de extinción es bastante crítico "
   }
 ];
 
