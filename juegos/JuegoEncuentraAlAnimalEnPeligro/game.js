@@ -1,27 +1,35 @@
 const ANIMALES = [
   {
     name: "Pangolín (Manis pentadactyla)",
-    x: 1500,
-    y: 500,
-    radius: 300,
+    x: 2100,
+    y: 650,
+    radius: 100,
     image: "img/pangolin.jpeg",
-    message: "El pangolín (Manis pentadactyla) ubicando en China, están en peligro de extinción debido a la caza y comercio ilegal por sus escamas y carne, así como la pérdida de hábitat; se estima que solo quedan unos 200,000 ejemplares en todo el mundo."
+    message: "El pangolín (Manis pentadactyla) ubicado en China, está en peligro de extinción debido a la caza y comercio ilegal por sus escamas y carne, así como la pérdida de hábitat; se estima que solo quedan unos 200,000 ejemplares en todo el mundo."
   },
   {
     name: "Lemur",
-    x: 1800,
-    y: 1000,
-    radius: 300,
+    x: 1760,
+    y: 1075,
+    radius: 100,
     image: "img/lemur.jpeg",
-    message: "El lemur ubicado en Madagastar, está en peligro de extinción debido a la deforestación, la caza furtiva y la pérdida de hábitat; se estima que quedan aproximadamente 2,000 ejemplares."
+    message: "El lemur ubicado en Madagascar, está en peligro de extinción debido a la deforestación, la caza furtiva y la pérdida de hábitat; se estima que quedan aproximadamente 2,000 ejemplares."
   },
   {
     name: "Rinoceronte de java",
-    x: 2500,
-    y: 800,
-    radius: 300,
+    x: 2350,
+    y: 1000,
+    radius: 100,
     image: "img/rinoceronte-java.jpg",
-    message: "El rinoceronte de Java ubicado en Indonesia, tiene una población de unos 58-68 rinocerontes, su riesgo de extinción es bastante crítico "
+    message: "El rinoceronte de Java ubicado en Indonesia, tiene una población de unos 58-68 rinocerontes, su riesgo de extinción es bastante crítico."
+  },
+  {
+    name: "Tamarino multicolor",
+    x: 2500,
+    y: 900,
+    radius: 100,
+    image: "img/tamarino-multicolor.jpg",
+    message: "El tamarino multicolor es originario de Panamá y algunas regiones del noroeste de Colombia. Está en peligro debido a la pérdida de hábitat y la caza furtiva."
   }
 ];
 
@@ -79,6 +87,8 @@ function startGame() {
   $map.addEventListener('mouseout', () => {
     $map.style.cursor = 'auto';
   });
+  $distance.innerHTML = '';  // Limpiar cualquier mensaje anterior
+  $distance.style.display = 'block';  // Asegurarse de que el mensaje esté visible al inicio
 }
 
 function showAnimal(animal) {
@@ -107,6 +117,7 @@ function handleClick(e) {
       $map.removeEventListener('click', handleClick);
       $map.removeEventListener('mouseover', () => {});
       $map.removeEventListener('mouseout', () => {});
+      $distance.style.display = 'none';  // Ocultar el mensaje al finalizar el juego
     }
   }
 }
